@@ -1,0 +1,19 @@
+.container {
+  border: 1px solid black;
+  max-width: 70rem;
+}
+
+.dark-mode {
+  background-color: #141d2f;
+}
+
+p {
+  color: black;
+}
+.dark-mode p {
+  color: white;
+}
+
+body {
+  background-color: #f6f8ff;
+}
