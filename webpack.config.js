@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
- mode: "production",
+ mode: "development",
  entry: './src/script.js',
  devServer: {
   static: './dist',
@@ -23,18 +23,16 @@ module.exports = {
   })
  ],
  output: {
-  filename: 'script.js',
   path: path.resolve(__dirname, 'dist'),
+  filename: '[name].js',
+  publicPath: '/',
+  clean: true
+
  },
 
  module: {
   rules: [
-   // Rule for JS files, transpile with Babel if needed
-   {
-    test: /\.js$/,
-    exclude: /node_modules/,
-    use: 'babel-loader'
-   },
+
    {
     test: /\.css$/i,
     use: ['style-loader', 'css-loader'],
@@ -58,7 +56,7 @@ module.exports = {
 
  },
  optimization: {
-  minimize: true,
+  minimize: true
  },
  resolve: {
   extensions: ['.js']

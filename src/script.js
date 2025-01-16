@@ -15,14 +15,14 @@ check.addEventListener("click", () => {
 
 function darkMode() {
   let element = document.body;
-  element.classList.toggle("dark-mode");
+  element.classList.toggle("dark_mode");
 }
 getGithubUser();
 
 
 async function getGithubUser() {
   const octokit = new Octokit({
-    auth: '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'
+    auth: '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'
   });
 
   await octokit.request('GET /users/{username}', {
