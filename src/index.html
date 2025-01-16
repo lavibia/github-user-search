@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevFinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -13,9 +19,11 @@
         <div id="button_wrap">
           <button id="dark">Dark</button>
           <button id="light">Light</button>
+          <input type="checkbox" name="dark" id="dark" />
+          <p>Something towrite here</p>
         </div>
       </header>
-      <main>
+      <section id="form_section">
         <form>
           <div role="search">
             <label
@@ -35,11 +43,8 @@
             <input class="button" type="button" value="Search" />
           </div>
         </form>
-        <section id="user_info"></section>
-      </main>
-
-      <input type="checkbox" name="dark" id="dark" />
-      <p>Something towrite here</p>
+      </section>
+      <section id="user_section"></section>
     </div>
   </body>
 </html>
