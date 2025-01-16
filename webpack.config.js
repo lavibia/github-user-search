@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
  mode: "development",
@@ -14,6 +15,10 @@ module.exports = {
   new HtmlWebpackPlugin({
    title: 'DevFinder',
    template: "src/index.html",
+  }),
+  new Dotenv({
+   path: './src/.env',
+   prefix: 'import.meta.env.' // reference your env variables as 'import.meta.env.ENV_VAR'.
   }),
   new CopyWebpackPlugin({
    patterns: [

@@ -1,5 +1,6 @@
 import "./style.css";
 import { Octokit } from "@octokit/core";
+// require('dotenv-webpack').config();
 
 console.log("Hello there");
 
@@ -22,7 +23,7 @@ getGithubUser();
 
 async function getGithubUser() {
   const octokit = new Octokit({
-    auth: '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'
+    auth: import.meta.env.API_KEY
   });
 
   await octokit.request('GET /users/{username}', {
