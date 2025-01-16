@@ -10,11 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="hide">
         <h1>devfinder</h1>
         <div id="button_wrap">
           <button id="dark">Dark</button>
@@ -23,7 +22,7 @@
           <p>Something towrite here</p>
         </div>
       </header>
-      <section id="form_section">
+      <section id="form_section" class="hide">
         <form>
           <div role="search">
             <label
@@ -44,7 +43,68 @@
           </div>
         </form>
       </section>
-      <section id="user_section"></section>
+      <section id="user_section">
+        <div id="user_header">
+          <img
+            src="https://avatars.githubusercontent.com/u/583231?v=4"
+            alt="user img"
+          />
+          <div>
+            <div>
+              <h2 class="h1">Octocat</h2>
+              <h3 class="h3">@username</h3>
+            </div>
+            <p class="p">date of creation</p>
+          </div>
+        </div>
+        <p id="bio" class="p">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
+          aliquid dolore voluptatum! Similique quam, mollitia nulla iste
+          laboriosam repellat? Odio, numquam! Illo nostrum error, officiis
+          maiores numquam consequatur velit reiciendis.
+        </p>
+        <div class="stats">
+          <div id="repos">
+            <h3 class="h4">Repos</h3>
+            <p class="h2">8</p>
+          </div>
+          <div id="followers">
+            <h3 class="h4">Followers</h3>
+            <p class="h2">150</p>
+          </div>
+          <div id="following">
+            <h3 class="h4">Followeing</h3>
+            <p class="h2">9</p>
+          </div>
+        </div>
+
+        <div class="contact">
+          <div>
+            <div id="location">
+              <span class="visualy-hidden">Location</span>
+              <img src="./assets/icon-location.svg" alt="" />
+              <p class="p">San Francisco</p>
+            </div>
+            <div id="blog">
+              <span class="visualy-hidden">Blog</span>
+              <img src="./assets/icon-website.svg" alt="" />
+              <p><a href="#" class="p">https:google.com</a></p>
+            </div>
+          </div>
+          <div>
+            <div id="twitter">
+              <span class="visualy-hidden">Twitter</span>
+              <img src="./assets/icon-twitter.svg" alt="" />
+              <p class="p">Not now</p>
+            </div>
+            <div id="company">
+              <span class="visualy-hidden">Company</span>
+              <img src="./assets/icon-company.svg" alt="" />
+              <p class="p">github</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
