@@ -95,7 +95,40 @@
 .dark_mode .h1,
 .dark_mode .h2,
 .dark_mode .h4,
-.dark_mode .p {
+.dark_mode .p,
+.dark_mode .logo {
+  color: var(--dark-white);
+}
+
+header {
+  width: 100%;
+  /* margin: 24px; */
+  /* padding: 32px 24px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  background: none;
+  border: none;
+  font-family: 'Space Mono', serif;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 2.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+#dark {
+  color: var(--light-blue);
+}
+
+#light {
+  display: none;
   color: var(--dark-white);
 }
 
