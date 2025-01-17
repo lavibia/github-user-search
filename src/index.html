@@ -26,7 +26,7 @@
           </button>
         </div>
       </header>
-      <section id="form_section" class="hide">
+      <section id="form_section">
         <form>
           <div role="search">
             <label
@@ -42,8 +42,19 @@
                 />
               </svg>
             </label>
-            <input id="search" type="text" placeholder="Search about recipes" />
-            <input class="button" type="button" value="Search" />
+            <input
+              id="search"
+              type="text"
+              placeholder="Search GitHub username..."
+            />
+            <span id="error">No results</span>
+            <input
+              class="button"
+              type="button"
+              value="Search"
+              class="h2"
+              id="search_btn"
+            />
           </div>
         </form>
       </section>
@@ -55,30 +66,25 @@
           />
           <div>
             <div>
-              <h2 class="h1">Octocat</h2>
-              <h3 class="h3">@username</h3>
+              <h2 class="h1"></h2>
+              <h3 class="h3"></h3>
             </div>
-            <p class="p">date of creation</p>
+            <p class="p"></p>
           </div>
         </div>
-        <p id="bio" class="p">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
-          aliquid dolore voluptatum! Similique quam, mollitia nulla iste
-          laboriosam repellat? Odio, numquam! Illo nostrum error, officiis
-          maiores numquam consequatur velit reiciendis.
-        </p>
+        <p id="bio" class="p"></p>
         <div class="stats">
           <div id="repos">
             <h3 class="h4">Repos</h3>
-            <p class="h2">8</p>
+            <p class="h2"></p>
           </div>
           <div id="followers">
             <h3 class="h4">Followers</h3>
-            <p class="h2">150</p>
+            <p class="h2"></p>
           </div>
           <div id="following">
             <h3 class="h4">Followeing</h3>
-            <p class="h2">9</p>
+            <p class="h2"></p>
           </div>
         </div>
 
@@ -92,19 +98,19 @@
             <div id="blog">
               <span class="visualy-hidden">Blog</span>
               <img src="./assets/icon-website.svg" alt="" />
-              <p><a href="#" class="p">https:google.com</a></p>
+              <a href="#" class="p">https:google.com</a>
             </div>
           </div>
           <div>
             <div id="twitter">
               <span class="visualy-hidden">Twitter</span>
               <img src="./assets/icon-twitter.svg" alt="" />
-              <p class="p">Not now</p>
+              <a href="#" class="p">https:google.com</a>
             </div>
             <div id="company">
               <span class="visualy-hidden">Company</span>
               <img src="./assets/icon-company.svg" alt="" />
-              <p class="p">github</p>
+              <a href="#" class="p">https:google.com</a>
             </div>
           </div>
         </div>
