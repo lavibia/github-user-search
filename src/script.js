@@ -15,8 +15,20 @@ check.addEventListener("click", () => {
 
 
 function darkMode() {
+  let light = document.getElementById("light");
+  let dark = document.getElementById("dark")
   let element = document.body;
   element.classList.toggle("dark_mode");
+  if (element.className == "dark_mode") {
+    //if in dark mode show light button and hide dark button
+    light.style.display = "flex";
+    dark.style.display = "none";
+  } else {
+    //if in light mode show dark btn and hide light button
+    light.style.display = "none";
+    dark.style.display = "flex";
+  }
+
 }
 getGithubUser();
 
