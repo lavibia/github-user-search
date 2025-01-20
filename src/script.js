@@ -16,11 +16,12 @@ document.querySelector('#search').addEventListener('focus', () => {
   let error = document.getElementById('error');
   error.style.display = 'none';
 });
+
 document.querySelector('#search').addEventListener('keydown', function (e) {
   if (e.key === 'Enter') {
     e.preventDefault()
     let input = document.getElementById("search").value
-    if (input != null || input != "") {
+    if (input !== null || input !== "") {
       getGithubUser(input.toString());
     }
   }
@@ -28,7 +29,7 @@ document.querySelector('#search').addEventListener('keydown', function (e) {
 });
 document.getElementById("search_btn").addEventListener('click', () => {
   let input = document.getElementById("search").value
-  if (input != null || input != "") {
+  if (input !== null || input !== "") {
     getGithubUser(input.toString());
   }
 
@@ -64,8 +65,8 @@ async function getGithubUser(username) {
     auth: import.meta.env.API_KEY
   });
 
-  await octokit.request('GET /users/{username}', {
-    username: username,
+  await octokit.request(`GET /users/${username}`, {
+    // username: username,
     headers: {
       'X-GitHub-Api-Version': '2022-11-28'
     }
@@ -73,6 +74,8 @@ async function getGithubUser(username) {
 
     if (res.status == 200) {
       displayUserData(res.data)
+    } else {
+      displayNotFound();
     }
 
   }).catch(err => {
